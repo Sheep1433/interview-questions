@@ -179,7 +179,7 @@ body {
     
 .question-item .answer { display: none; }
 .question-item.expanded .answer { display: block; }
-.answer-content { font-size: 14px !important; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; word-break: break-all; }
+.answer-content { font-size: 14px !important; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; word-break: break-all; overflow-x: visible; }
 .answer-content pre, .answer-content code { font-size: 13px !important; }
 </style>
 </head>
@@ -299,7 +299,8 @@ body {
             if (!answer) return '暂无答案';
             return answer
                 .replace(/```(\w*)\n?([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
-                .replace(/`([^`]+)`/g, '<code>$1</code>');
+                .replace(/`([^`]+)`/g, '<code>$1</code>')
+                .replace(/\n/g, '<br>');
         }
 
         // 切换答案显示
