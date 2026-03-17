@@ -137,6 +137,9 @@ body {
 .question-title {
     font-size: 14px;
     font-weight: 500;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
 }
 
 
@@ -176,7 +179,7 @@ body {
     
 .question-item .answer { display: none; }
 .question-item.expanded .answer { display: block; }
-.answer-content { font-size: 14px !important; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; }
+.answer-content { font-size: 14px !important; line-height: 1.7; white-space: pre-wrap; word-wrap: break-word; overflow-wrap: break-word; word-break: break-all; }
 .answer-content pre, .answer-content code { font-size: 13px !important; }
 </style>
 </head>
